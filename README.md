@@ -1,6 +1,6 @@
 # SentinelPrompt
 
-An indirect prompt injection detection system for tool-calling LLM pipelines. SentinelPrompt inspects untrusted content user input, retrieved documents, web pages, or tool/function outputs — and classifies whether it contains a prompt injection attack before that content reaches a downstream LLM application.
+An indirect prompt injection detection system for tool-calling LLM pipelines. SentinelPrompt inspects untrusted content user input, retrieved documents, web pages, or tool/function outputs and classifies whether it contains a prompt injection attack before that content reaches a downstream LLM application.
 
 Live demo: https://ipi333.streamlit.app/
 
@@ -21,18 +21,26 @@ This isolation pattern (fixed system prompt, tagged untrusted data, structured-o
 
 SentinelPrompt classifies content against the following categories:
 
-- **Direct Instruction Override** — content that tells the model to ignore, forget, or override its prior instructions.
-- **System Prompt Extraction** — attempts to get the model to reveal or leak its hidden system prompt or configuration.
-- **Roleplay Jailbreak** — persona or hypothetical-scenario framing used to bypass normal behavioral constraints.
-- **Indirect Prompt Injection** — malicious instructions embedded in external content the model is only supposed to process, not obey.
-- **Context Manipulation** — fabricated prior turns, fake system messages, or fake "end of instructions" markers.
-- **Instruction Smuggling** — instructions hidden via encoding, unusual formatting, translation, or whitespace tricks.
-- **Tool Manipulation** — attempts to make an agent call tools/functions it shouldn't, with unauthorized parameters or sequencing.
-- **Data Exfiltration Attempt** — attempts to leak confidential data to an unauthorized party (e.g. via an embedded URL).
-- **Privilege Escalation** — content that claims elevated authority (admin, developer, etc.) to unlock restricted behavior.
-- **Multi-Turn Manipulation** — an attack spread across multiple turns that builds context or trust exploited later.
+- **Direct Instruction Override** : content that tells the model to ignore, forget, or override its prior instructions.
+- **System Prompt Extraction** : attempts to get the model to reveal or leak its hidden system prompt or configuration.
+- **Roleplay Jailbreak** : persona or hypothetical-scenario framing used to bypass normal behavioral constraints.
+- **Indirect Prompt Injection** : malicious instructions embedded in external content the model is only supposed to process, not obey.
+- **Context Manipulation** : fabricated prior turns, fake system messages, or fake "end of instructions" markers.
+- **Instruction Smuggling** : instructions hidden via encoding, unusual formatting, translation, or whitespace tricks.
+- **Tool Manipulation** : attempts to make an agent call tools/functions it shouldn't, with unauthorized parameters or sequencing.
+- **Data Exfiltration Attempt** : attempts to leak confidential data to an unauthorized party (e.g. via an embedded URL).
+- **Privilege Escalation** : content that claims elevated authority (admin, developer, etc.) to unlock restricted behavior.
+- **Multi-Turn Manipulation** : an attack spread across multiple turns that builds context or trust exploited later.
 
 Each analysis also returns a risk level (`SAFE`, `LOW`, `MEDIUM`, `HIGH`, `CRITICAL`), a confidence score, and a recommended action (`ALLOW`, `FLAG`, `SANITIZE`, `BLOCK`).
+
+<h2>Screenshots Gallery:</h2>
+<p>Here’s a quick visual walkthrough of the app:</p>
+
+<h3>Landing Page </h3>
+<p align="center">
+  <img src="assets/Screenshot 2026-08-24 161418.png" width="900">
+</p>
 
 ## Project structure
 
@@ -90,5 +98,5 @@ Enter the (optional) application/system instructions and the content you want to
 
 ## Sample test cases
 
-`attacks.json` contains a set of illustrative prompts covering direct overrides, roleplay jailbreaks, indirect injection, instruction smuggling, and multi-turn drift, useful for manually exercising the detector. The labels in this file are rough author-assigned expectations for eyeballing results, not a formal benchmark ground truth.
+`attacks.json` contains a set of illustrative prompts covering direct overrides, roleplay jailbreaks, indirect injection, instruction smuggling, and multi-turn drift, useful for manually exercising the detector. The labels in this file are rough author assigned expectations for eyeballing results, not a formal benchmark ground truth.
 You guys can use them to test the model.
