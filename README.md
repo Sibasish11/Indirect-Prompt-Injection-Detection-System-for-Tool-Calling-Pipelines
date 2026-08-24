@@ -1,4 +1,4 @@
-# SentinelPrompt
+# Indirect Prompt Injection Detection System
 
 An indirect prompt injection detection system for tool-calling LLM pipelines. SentinelPrompt inspects untrusted content user input, retrieved documents, web pages, or tool/function outputs and classifies whether it contains a prompt injection attack before that content reaches a downstream LLM application.
 
