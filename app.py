@@ -1,13 +1,3 @@
-"""
-app.py
-
-SentinelPrompt - minimal end-to-end prototype (Step 3 of the build plan).
-
-This is intentionally bare-bones: one input box, one button, raw JSON
-output. Purpose is to prove the full pipeline (UI -> analyzer -> Claude ->
-validator -> UI) works before investing in the polished dashboard.
-"""
-
 import streamlit as st
 from dotenv import load_dotenv
 
