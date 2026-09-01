@@ -51,4 +51,9 @@ if st.button("Analyze", type="primary"):
         for m in result.mitigation:
             st.write(f"- {m}")
 
-    
+
+
+
+
+    with st.expander("Raw validated result (debug)"):
+            st.json(result.model_dump())
