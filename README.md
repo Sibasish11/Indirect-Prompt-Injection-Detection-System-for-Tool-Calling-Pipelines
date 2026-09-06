@@ -13,8 +13,6 @@ Agentic LLM applications routinely feed untrusted external content (search resul
 1. The application's trusted system instructions, the untrusted external content, and optional conversation context are wrapped in explicit, clearly labeled tags.
 2. A fixed system prompt instructs the analysis model that everything inside those tags is data to be examined, never instructions to follow : the same principle as a malware scanner that must not run the malware it is scanning.
 3. The model returns a structured JSON verdict: whether an injection was detected, its risk level, confidence, attack type(s), likely attacker intent, supporting evidence, a plain-language reasoning summary, a recommended action, and mitigation steps.
-4. 
-This isolation pattern (fixed system prompt, tagged untrusted data, structured-output-only response) is the current standard mitigation for indirect prompt injection and does not claim to make injection against the analyzer itself impossible.
 
 ## Attack taxonomy
 
