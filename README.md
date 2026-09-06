@@ -90,9 +90,6 @@ OPENROUTER_MODEL=openai/gpt-oss-20b:free
 ```bash
 streamlit run app.py
 ```
-
-Enter the (optional) application/system instructions and the content you want to analyze, then click **Analyze** to see the classification, evidence, reasoning, and recommended action.
-
 ## Sample test cases
 
 `attacks.json` contains a set of illustrative prompts covering direct overrides, roleplay jailbreaks, indirect injection, instruction smuggling, and multi-turn drift, useful for manually exercising the detector. The labels in this file are rough author assigned expectations for eyeballing results, not a formal benchmark ground truth.
