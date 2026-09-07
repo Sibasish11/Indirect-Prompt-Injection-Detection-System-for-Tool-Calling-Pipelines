@@ -1,13 +1,3 @@
-"""
-core/taxonomy.py
-
-Central definition of the attack categories SentinelPrompt can classify.
-
-This is the single source of truth for attack type names. Everything else
-(prompts.py, validator.py, risk_engine.py, baseline.py, the UI) imports from
-here so that adding a new category later means editing ONE file.
-"""
-
 from enum import Enum
 
 
