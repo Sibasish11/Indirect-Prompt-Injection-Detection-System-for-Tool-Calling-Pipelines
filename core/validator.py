@@ -1,18 +1,3 @@
-"""
-core/validator.py
-
-We never trust Claude's raw output blindly. This module defines the
-expected schema and turns the raw API response into either:
-
-  - a validated AnalysisResult, or
-  - a clearly-marked fallback AnalysisResult (fail-safe: on any doubt about
-    what the model said, we do NOT silently mark content as safe).
-
-Handles: malformed JSON, missing fields, out-of-range values, unknown enum
-values, and markdown code-fence wrapping (models sometimes add ```json
-fences even when told not to).
-"""
-
 from __future__ import annotations
 
 import json
