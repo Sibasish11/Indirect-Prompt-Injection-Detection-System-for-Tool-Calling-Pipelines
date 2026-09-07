@@ -26,8 +26,6 @@ SentinelPrompt classifies content against the following categories:
 - **Instruction Smuggling** : instructions hidden via encoding, unusual formatting, translation, or whitespace tricks.
 - **Tool Manipulation** : attempts to make an agent call tools/functions it shouldn't, with unauthorized parameters or sequencing.
 - **Data Exfiltration Attempt** : attempts to leak confidential data to an unauthorized party (e.g. via an embedded URL).
-- **Privilege Escalation** : content that claims elevated authority (admin, developer, etc.) to unlock restricted behavior.
-- **Multi-Turn Manipulation** : an attack spread across multiple turns that builds context or trust exploited later.
 
 Each analysis also returns a risk level (`SAFE`, `LOW`, `MEDIUM`, `HIGH`, `CRITICAL`), a confidence score, and a recommended action (`ALLOW`, `FLAG`, `SANITIZE`, `BLOCK`).
 
