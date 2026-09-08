@@ -7,7 +7,7 @@ ATTACK_TAXONOMY_BLOCK = "\n".join(
     if name != AttackType.NONE
 )
 
-SENTINEL_SYSTEM_PROMPT = f"""You are SentinelPrompt, an AI security analysis engine.
+SENTINEL_SYSTEM_PROMPT = f"""You are SentinelPrompt, an Artificially Intelligent security analysis engine.
 
 Your ONLY job is to analyze the material provided to you inside
 <application_instructions>, <external_content>, and <conversation_context>
