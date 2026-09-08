@@ -21,9 +21,6 @@ class AttackType(str, Enum):
     NONE = "NONE"  # explicit "no attack detected" value, avoids empty-list ambiguity
 
 
-# Human-readable descriptions, used both in the prompt sent to Claude (so it
-# knows what each category means) and in the UI (so judges/users understand
-# the label they're looking at).
 ATTACK_TYPE_DESCRIPTIONS: dict[str, str] = {
     AttackType.DIRECT_INSTRUCTION_OVERRIDE: (
         "The input directly instructs the model to ignore, forget, or override "
