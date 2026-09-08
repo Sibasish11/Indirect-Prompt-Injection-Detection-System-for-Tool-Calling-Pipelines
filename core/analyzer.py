@@ -1,15 +1,3 @@
-"""
-core/analyzer.py
-
-Wraps the LLM API call: takes raw analysis inputs, builds the isolated
-prompt (via prompts.py), calls the model, and returns a validated
-AnalysisResult (via validator.py). Handles API errors, rate limits, and
-timeouts gracefully -- callers never see a raw exception.
-
-MODEL PROVIDER: OpenRouter, called via the OpenAI-compatible SDK.
-OpenRouter exposes free chat models through the same client interface.
-"""
-
 from __future__ import annotations
 
 import os
