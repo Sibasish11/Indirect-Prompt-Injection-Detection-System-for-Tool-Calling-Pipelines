@@ -20,8 +20,7 @@ class AnalysisResult(BaseModel):
     reasoning_summary: str = ""
     recommended_action: RecommendedAction
     mitigation: list[str] = Field(default_factory=list)
-
-    # bookkeeping, filled in by the caller rather than the model
+    
     is_fallback: bool = False
     fallback_reason: str | None = None
     raw_model_output: str | None = None
