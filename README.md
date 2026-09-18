@@ -6,8 +6,7 @@ Live demo: https://ipi333.streamlit.app/
 
 ## Why this exists
 
-Agentic LLM applications routinely feed untrusted external content (search results, documents, API responses, tool outputs) back into a model's context. If that content contains hidden instructions, it can hijack the model's behavior this is indirect prompt injection. SentinelPrompt acts as a security scanner that sits in front of that content: it analyzes the content for injection attempts without ever executing any instructions found inside it.
-
+Agentic LLM applications routinely feed untrusted external content (search results, documents, API responses, tool outputs) back into a model's context. If that content contains hidden instructions, it can hijack the model's behavior this is indirect prompt injection. SentinelPrompt acts as a security scanner that sits in front of that content.
 ## How it works
 
 1. The application's trusted system instructions, the untrusted external content, and optional conversation context are wrapped in explicit, clearly labeled tags.
