@@ -79,7 +79,7 @@ OPENROUTER_API_KEY=your_openrouter_api_key
 OPENROUTER_MODEL=openai/gpt-oss-20b:free
 ```
 
-`OPENROUTER_MODEL` can be pointed at any chat-completion-capable model available on OpenRouter, including free-tier models.
+`OPENROUTER_MODEL` can be pointed at any chat-completion-capable model available on OpenRouter, including free tier models.
 
 ### Running locally
 
