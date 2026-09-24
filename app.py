@@ -51,6 +51,5 @@ if st.button("Analyze", type="primary"):
             st.write(f"- {m}")
 
 
-
     with st.expander("Raw validated result (debug)"):
             st.json(result.model_dump())
