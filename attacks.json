@@ -1,5 +1,5 @@
 {
-  "_note": "Dummy test prompts for exercising SentinelPrompt's detector. Patterns are based on widely-documented public techniques (DAN/roleplay, OWASP LLM Top 10, 'Ignore Previous Prompt' Perez & Ribeiro 2022, Crescendo/multi-turn drift). 'expected_*' fields are the author's own rough labels for eyeballing results, not ground truth Claude/Grok must match exactly.",
+  "_note": "Dummy test prompts for exercising SentinelPrompt's detector. Patterns are based on widely-documented public techniques (DAN/roleplay, OWASP LLM Top 10, 'Ignore Previous Prompt' Perez & Ribeiro 2022, Crescendo/multi-turn drift). 'expected_*' fields are the author's own rough labels for eyeballing results, not ground truth Claude must match exactly.",
 
   "examples": [
 
