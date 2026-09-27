@@ -21,7 +21,6 @@ SentinelPrompt classifies content against the following categories:
 - **Indirect Prompt Injection** : malicious instructions embedded in external content the model is only supposed to process, not obey.
 - **Context Manipulation** : fabricated prior turns, fake system messages, or fake "end of instructions" markers.
 - **Instruction Smuggling** : instructions hidden via encoding, unusual formatting, translation, or whitespace tricks.
-- **Tool Manipulation** : attempts to make an agent call tools/functions it shouldn't, with unauthorized parameters or sequencing.
 - **Data Exfiltration Attempt** : attempts to leak confidential data to an unauthorized party (e.g. via an embedded URL).
 
 Each analysis also returns a risk level (`SAFE`, `LOW`, `MEDIUM`, `HIGH`, `CRITICAL`), a confidence score, and a recommended action (`ALLOW`, `FLAG`, `SANITIZE`, `BLOCK`).
