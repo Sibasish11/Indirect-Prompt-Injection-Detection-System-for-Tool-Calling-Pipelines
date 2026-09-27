@@ -17,7 +17,6 @@ Agentic LLM applications routinely feed untrusted external content (search resul
 SentinelPrompt classifies content against the following categories:
 
 - **Direct Instruction Override** : content that tells the model to ignore, forget, or override its prior instructions.
-- **System Prompt Extraction** : attempts to get the model to reveal or leak its hidden system prompt or configuration.
 - **Roleplay Jailbreak** : persona or hypothetical-scenario framing used to bypass normal behavioral constraints.
 - **Indirect Prompt Injection** : malicious instructions embedded in external content the model is only supposed to process, not obey.
 - **Context Manipulation** : fabricated prior turns, fake system messages, or fake "end of instructions" markers.
